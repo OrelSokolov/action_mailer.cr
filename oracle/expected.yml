@@ -1,0 +1,40 @@
+dsl_from	["noreply@example.com"]
+dsl_to	["bob@example.com"]
+dsl_subject	Welcome!
+dsl_content_type	text/plain; charset=UTF-8
+dsl_body	TEXT BODY
+dsl_headers	yes
+dsl_delivery_class	ActionMailer::MessageDelivery
+del_deliveries_size	1
+del_last_subject	Welcome!
+del_last_to	["bob@example.com"]
+del_now_returns	Mail::Message
+mp_multipart	true
+mp_parts	["text/plain; charset=UTF-8", "text/html; charset=UTF-8"]
+mp_part_bodies	["TEXT BODY", "<p>HTML BODY</p>"]
+mp_top_ct	multipart/alternative
+uni_charset	UTF-8
+uni_decoded	Привет, мир!
+uni_encoded	Привет, мир!
+att_multipart	true
+att_top_ct	multipart/mixed
+att_names	["report.txt"]
+att_decoded	["ATTACH DATA"]
+att_cte	["7bit"]
+att_mime	["text/plain"]
+dl_job_class	ActionMailer::MailDeliveryJob
+dl_args	["BenchMailer", "welcome_email", "deliver_now", {"args" => ["bob@example.com"], "_aj_ruby2_keywords" => ["args"]}]
+dl_no_delivery	2
+dl_scheduled	true
+with_subject	Hello ann@example.com
+with_body	PARAM BODY ann@example.com
+with_to	["bob@example.com"]
+with_class	ActionMailer::Parameterized::MessageDelivery
+with_params_default	{}
+with_deliver_now	Hello ann@example.com
+with_dl_job_class	ActionMailer::MailDeliveryJob
+with_dl_args	["BenchMailer", "param_email", "deliver_now", {"params" => {"user" => "ann@example.com", "_aj_symbol_keys" => ["user"]}, "args" => ["bob@example.com"], "_aj_ruby2_keywords" => ["params", "args"]}]
+dm_custom	1
+dm_file	[1, "file@example.com", true]
+dm_smtp_swallowed	Mail::Message
+dm_unknown	raise:RuntimeError
